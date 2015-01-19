@@ -1,0 +1,17 @@
+<!--Created by esoyke on 1/14/15.--><br/><br/><h1>Cardholder Search</h1><form method="post" id="loginForm" class="form-horizontal multiple-form-group"><div class="form-group"><div class="col-md-3"><label>Account Number:</label></div><div class="col-md-3"><input id="username" type="text" name="User" placeholder="Enter cardnumber"/></div></div><div class="form-group"><div class="col-md-3"><label>Social Security Number:</label></div><div class="col-md-3"><input id="ssn" type="number" name="ssn" class="span3"/></div></div><div class="form-group"><div class="col-md-3"><label>Name & Birthdate:</label></div><div class="col-md-3"><input id="cardholderName" type="text" name="cardholderName" class="span3"/></div><div class="col-md-3"><dropdown><dropdown-toggle id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href=""><input-group><input type="text" data-ng-model="data.date" class="form-control"/><input-group-addon class="span"><glyphicon class="glyphicon-calendar i"></glyphicon></input-group-addon></input-group></dropdown-toggle></dropdown><ul role="menu" aria-labelledby="dLabel" class="dropdown-menu"><datetimepicker data-ng-model="data.date"><!--data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"--></datetimepicker></ul></div><!--<body ng-controller="MyController" class="pad">--><!--<h2> ui.bootstrap.datetimepicker</h2>--><!--<!-- ui.bootstrap.datetimepicker (Dropdown Datetime with input box) -->--><!--<div class="dropdown">--><!--<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="">--><!--<div class="input-group">--><!--<input type="text" class="form-control" data-ng-model="data.date">--><!--<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>--><!--</div>--><!--</a>--><!--.col-md-3.datepicker.input-append.date
+   input.input-small(type='text', name='start')
+   span.add-on(style='vertical-align: top; height: 20px;')
+   
+   --><!--.col-md-3--><!--   input-append.date.span3(id="datepicker", type="datepicker")--><!--   icon-calendar.span--><!--.col-md-3--><!--   .div(id='datetimepicker1', ng-controller='searchCardholderCtrl')--><!--      datetimepicker(min-date='minDate', show-weeks='showWeeks', hour-step='hourStep', minute-step='minuteStep', ng-model='date', show-meridian='showMeridian', date-format='dd-MMM-yyyy', date-options='dateOptions', date-disabled='disabled(date, mode)', showMinutes='true')--><!--.col-md-3.input-group.date
+  #datepicker.input-date.input-group
+    input#bDate.input-sm.form-control(type='text', name='start', placeholder='bdate')
+    span.input-group-btn
+       button.btn.btn-default.btn-sm(type='button', style='margin-left:8px;')
+          i.fa.fa-refresh
+          
+          
+//<div class="input-append date" id="datepicker" data-date="dateValue: Customer.DateOfBirth" data-date-format="dd-mm-yyyy">
+ //<input class="span2" size="16" type="text" data-bind="value: Customer.DateOfBirth" readonly="readonly" />
+ //<span class="add-on"><i class="icon-calendar"></i></span>
+ //</div>
+ --></div><input type="submit" value="Search" class="btn"/></form>

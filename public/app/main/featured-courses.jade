@@ -1,0 +1,8 @@
+.panel.panel-primary
+  .panel-heading.text-center Featured Books
+  .panel-body
+    .row(ng-repeat="course in courses | filter:{featured:true}")
+      .col-md-8
+        a(href="/courses/{{course._id}}") {{course.title}}
+      .col-md-4
+        h6 {{course.price | currency}}

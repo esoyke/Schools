@@ -1,0 +1,69 @@
+//
+   Created by esoyke on 1/14/15.
+
+br
+br
+h1 Cardholder Search
+
+form.form-horizontal.multiple-form-group(method="post", id="loginForm")
+   .fontSoft.h5 (Choose one)
+   .form-group.form-group-lg
+      .col-md-2.control-label
+         label Account Number:
+      .col-md-3.input-lg
+         input(id="username", type="text", name="User", placeholder="Enter cardnumber")
+   .form-group.form-group-lg
+      .col-md-2.control-label
+         label SSN:
+      .col-md-2.input-lg
+         input.span3(id="ssn", type="number", name="ssn", placeholder="1234")
+      //.col-md-2.label.shiftDown20
+         label Last 4 digits only
+   .form-group.form-group-lg
+      .col-md-2.control-label
+         label Name & Birthdate:
+      .col-md-2.input-lg
+            input.span3(id="cardholderName", type="text", name="cardholderName")
+      .col-md-offset-1.col-md-3
+         .dropdown
+            a#dropdown2.dropdown-toggle(role='button', data-toggle='dropdown', data-target='#', href='')
+               .input-group.shiftDown5.shiftRight5
+                  input.form-control(type='text', data-ng-model='data.date')
+                  span.input-group-addon
+                     i.glyphicon.glyphicon-calendar
+            ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
+               datetimepicker(data-ng-model='data.date', data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }")
+
+   .col-md-offset-3
+      input.btn(type="submit", value="Search")
+
+
+//.col-md-3
+         .datepicker.input-append.date
+            input.input-small(type='text', name='start')
+            span.add-on(style='vertical-align: top; height: 20px;')
+
+
+      //.col-md-3
+      //   input-append.date.span3(id="datepicker", type="datepicker")
+      //   icon-calendar.span
+
+      //.col-md-3
+      //   .div(id='datetimepicker1', ng-controller='searchCardholderCtrl')
+      //      datetimepicker(min-date='minDate', show-weeks='showWeeks', hour-step='hourStep', minute-step='minuteStep', ng-model='date', show-meridian='showMeridian', date-format='dd-MMM-yyyy', date-options='dateOptions', date-disabled='disabled(date, mode)', showMinutes='true')
+
+      //.col-md-3
+        .input-group.date
+          #datepicker.input-date.input-group
+            input#bDate.input-sm.form-control(type='text', name='start', placeholder='bdate')
+            span.input-group-btn
+               button.btn.btn-default.btn-sm(type='button', style='margin-left:8px;')
+                  i.fa.fa-refresh
+
+
+         //<div class="input-append date" id="datepicker" data-date="dateValue: Customer.DateOfBirth" data-date-format="dd-mm-yyyy">
+         //<input class="span2" size="16" type="text" data-bind="value: Customer.DateOfBirth" readonly="readonly" />
+         //<span class="add-on"><i class="icon-calendar"></i></span>
+         //</div>
+
+

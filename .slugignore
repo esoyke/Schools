@@ -1,0 +1,5 @@
+/node_modules/karma/
+/node_modules/karma-chrome-launcher/
+/node_modules/karma-mocha/
+/node_modules/karma-ng-html2js-preprocessor/
+/node_modules/karma-chai-plugins

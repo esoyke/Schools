@@ -1,0 +1,1 @@
+<div class="panel panel-primary"><div class="panel-heading text-center">Featured Books</div><div class="panel-body"><div ng-repeat="course in courses | filter:{featured:true}" class="row"><div class="col-md-8"><a href="/courses/{{course._id}}">{{course.title}}</a></div><div class="col-md-4"><h6>{{course.price | currency}}</h6></div></div></div></div>

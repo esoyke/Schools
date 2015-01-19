@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    title Schools Financial credit interface
+    link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
+    link(href="/css/bootstrap.css", rel="stylesheet")
+    link(href="/vendor/toastr/toastr.css", rel="stylesheet")
+    link(href="/css/site.css", rel="stylesheet")
+    // add local?
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker.css" rel="styleSheet")
+  body(ng-app='app')
+    include currentUser
+    block main-content
+      h1 layout.jade
+    footer.navbar-fixed-bottom.container.text-center
+      p &copy; 2015 Schools Financial
+    // here you could include another block
+    //block main-content2
+    include scripts

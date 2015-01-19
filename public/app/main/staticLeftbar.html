@@ -1,0 +1,29 @@
+<!--Created by esoyke on 1/14/15.--><br/><br/><!--h1 This is the static left bar--><!--h4 Name: &nbsp;&nbsp; Joe Cool {{cardholderInfo.name}}--><!-- when I added the below div it finally is calling the controller (the others seem to be having the controller defined in app.js routing rules,but this partial is loaded without hitting a route and apparently did not have a controller assigned since I was just doing an ng-include
+on the partial. I had to select the first cardholderInfo from the array, should change the cachedCardholderInfo service to only return one?
+--><div ng-controller="cardholderInfoCtrl" class="majorSection"><legend>{{cardholderInfo[0].primaryName}}</legend><table class="table-condensed"><tr class="tr"><td><img src="images/silhouette.png" width="100" height="100"/></td><td><table><tr class="tr"><td>{{cardholderInfo[0].addressLine1}}</td></tr><tr class="tr"><td>{{cardholderInfo[0].addressLine2}}</td></tr><tr class="tr"><td>{{cardholderInfo[0].city}}, {{cardholderInfo[0].state}}</td></tr><tr class="tr"><td>{{cardholderInfo[0].zip}}</td></tr></table></td></tr><!--tr.trtd.col-md-4.h4 {{cardholderInfo[0].primaryName}}--><!--tr.tr--><!--   td.col-md-2.text-right.h5--><!--   td.col-md-4.h5 {{cardholderInfo[0].addressLine1}}--><!--tr.tr--><!--   td.col-md-2.text-right.h5--><!--   td.col-md-4.h5 {{cardholderInfo[0].addressLine2}}--><!--tr.tr--><!--   td.col-md-2.text-right.h5--><!--   td.col-md-4.h5 {{cardholderInfo[0].city}}, {{cardholderInfo[0].state}}--><!--tr.tr--><!--   td.col-md-2.text-right.h5--><!--   td.col-md-4.h5 {{cardholderInfo[0].zip}}--><tr class="tr"><td class="col-md-2 text-right h5">Home Phone :</td><td class="col-md-4 h5">{{cardholderInfo[0].homePhone}}</td></tr><tr class="tr"><td class="col-md-2 text-right h5">Work Phone :</td><td class="col-md-4 h5">{{cardholderInfo[0].workPhone}}</td></tr><tr class="tr"><td class="col-md-2 text-right h5">Mobile Phone :</td><td class="col-md-4 h5">{{cardholderInfo[0].mobilePhone}}</td></tr><tr class="tr"><td class="col-md-2 text-right h5">SSN :</td><td class="col-md-4 h5">{{cardholderInfo[0].ssn}}</td></tr><tr class="tr"><td class="col-md-2 text-right h5">Date of Birth :</td><td class="col-md-4 h5">{{cardholderInfo[0].dob}}</td></tr></table><legend>Account Information</legend><table class="table-condensed"><tr class="tr"><td class="col-md-3 text-right h5">Account # :</td><td class="col-md-4 h5">{{cardholderInfo[0].primaryPIID}}</td></tr><tr class="tr"><td class="col-md-3 text-right h5">Internal Status :</td><td class="col-md-4 h5">{{cardholderInfo[0].internalStatus}}</td></tr><tr class="tr"><td class="col-md-3 text-right h5">External Status :</td><td class="col-md-4 h5">{{cardholderInfo[0].externalStatus}}</td></tr><tr class="tr"><td class="col-md-3 text-right h5">Open Date :</td><td class="col-md-4 h5">{{cardholderInfo[0].openDate}}</td></tr><tr class="tr"><td class="col-md-3 text-right h5">Exp. Date :</td><td class="col-md-4 h5">{{cardholderInfo[0].expDate}}</td></tr></table><legend>Joint Account Information</legend><table class="table-condensed"><tr class="tr"><td class="col-md-4 text-right h5">Secondary holder :</td><td class="col-md-4 h5">{{cardholderInfo[0].secondaryName}}</td></tr><tr ng-repeat="authUser in cardholderInfo[0].authUsers" class="h5"><td class="col-md-4 h5">Authorized holder :</td><td class="col-md-4 h8">{{authUser.authName}}</td></tr><!-- List of Auth users and PIIDs if CU is CAP//tr.h5(ng-repeat="authUser in cardholderInfo[0].authUsers")
+   td.col-md-4.h5 {{authUser.authName}}
+   td.col-md-8.h5 {{authUser.authPIID}}
+   --></table><!--tr.tr//   img(src="images/silhouette.png" width=100 height=100)
+//   td.col-md-4.h4 {{cardholderInfo[0].primaryName}}
+//tr.tr
+//   td.col-md-2.text-right.h5
+//   td.col-md-4.h5 {{cardholderInfo[0].addressLine1}}
+//tr.tr
+//   td.col-md-2.text-right.h5
+//   td.col-md-4.h5 {{cardholderInfo[0].addressLine2}}
+//tr.tr
+//   td.col-md-2.text-right.h5
+//   td.col-md-4.h5 {{cardholderInfo[0].city}}, {{cardholderInfo[0].state}}
+//tr.tr
+//   td.col-md-2.text-right.h5
+//   td.col-md-4.h5 {{cardholderInfo[0].zip}}
+
+//tr.tr
+   td.col-md-2.text-right.h5 Auth Users:
+   td
+//table.table-condensed
+   tr.col-md-12.h5(ng-repeat="authUser in cardholderInfo[0].authUsers")
+      td.col-md-4.h6 {{authUser.authName}} :
+      td.col-md-8.h6 {{authUser.authPIID}}
+      
+      --></div><!-- works for manual lookup of known index--><!--h6 auth: {{cardholderInfo[0].authUsers[0].authPIID}}-->

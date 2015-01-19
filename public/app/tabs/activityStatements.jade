@@ -1,0 +1,54 @@
+//
+   Created by esoyke on 1/13/15.
+br
+br
+h1 Activity & Statements
+
+   h2 Pending Transactions
+   table.table.table-hover.table-striped.table-condensed.table-bordered
+      thread
+         tr
+            th Date
+            th Description
+            th Merchant Details
+            th Amount
+         tbody
+            tr(ng-repeat="pending in pendingTransactions")
+               td {{pending.date}}
+               td {{pending.description}}
+               td {{pending.merchantDetails}}
+               td {{pending.amount}}
+
+   h2 Posted Transactions
+   table.table.table-hover.table-striped.table-condensed
+      thread
+         tr
+            th Date
+            th Description
+            th Merchant Details
+            th Amount
+         tbody
+            tr(ng-repeat="transaction in postedTransactions")
+               td {{transaction.date}}
+               td {{transaction.description}}
+               td {{transaction.merchantDetails}}
+               td {{transaction.amount}}
+
+   //TODO- change table alignment to vertical (CSS?)
+   h2 Cardholder Statement History
+   table.table.table-hover.table-striped.table-condensed
+      thread
+         tr
+            th Statement Date
+            th New Balance
+            th Min Payment Due
+            th Due Date
+            th Past Due
+         tbody
+            tr(ng-repeat="statement in statements")
+               td {{statement.date}}
+               td {{statement.newBalance}}
+               td {{statement.minPaymentDue}}
+               td {{statement.dueDate}}
+               td {{statement.pastDue}}
+

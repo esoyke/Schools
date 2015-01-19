@@ -1,0 +1,107 @@
+body {
+  background-color: #fff;
+}
+.majorSection {
+  background-color: #d1e6f4;
+}
+.navbar {
+  background-color: #fff;
+}
+.navbar-inverse .navbar-nav li a {
+  color: #bf001a;
+}
+.navbar-inverse .navbar-nav li a:hover {
+  color: #fff;
+  background-color: #bf001a;
+}
+.navbar-inverse .navbar-nav li a:focus {
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+legend {
+  background-color: #fff;
+}
+temp {
+  background-color: #fff;
+  margin: 20px;
+}
+.fontSoft {
+  color: #a9a9a9;
+}
+body {
+  padding-top: 69px;
+  padding-bottom: 70px;
+}
+.majorSection {
+  border-radius: 5px;
+  padding: 10px;
+}
+legend {
+  margin-bottom: -1px;
+  padding: 2px;
+  border-radius: 3px;
+}
+pad10 {
+  padding: 10px;
+}
+.navbar-inverse .navbar-nav li a:focus {
+  font-size: 150%;
+}
+.navbar-inverse .navbar-nav li a {
+  font-size: 120%;
+}
+.navbar {
+  margin-left: -200px;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+ul.nav.navbar-nav {
+  margin-right: -300px;
+}
+#main-content {
+  overflow: auto;
+  padding-bottom: 150px;
+/* this needs to be bigger than footer height*/
+}
+.footer {
+  position: relative;
+  margin-top: -150px;
+/* negative value of footer height */
+  height: 150px;
+  clear: both;
+  padding-top: 20px;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.top-padding-med {
+  padding-top: 10px;
+}
+.margin-left-med {
+  margin-left: 10px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #eb7260;
+}
+.navbar-brand {
+  float: left;
+  height: 30px;
+  padding: 15px 15px;
+  font-size: 24px;
+  line-height: 20px;
+}
+/*shiftRight5*/
+/*margin-left 25px !important;*/
+/*padding-left 25px!important;*/
+/*margin-right 25px !important;*/
+/*padding-right 25px !important;*/
+/*td*/
+/*background-color red;*/

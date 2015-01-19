@@ -1,0 +1,58 @@
+extends ../includes/layout
+// must start block on column 0 or node throws error: 'unexpected token 'indent'
+block main-content
+  .navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        //a.navbar-brand(href="/searchCardholder") Search
+      button.navbar-toggle(data-toggle="collapse" data-target=".navbar-collapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li
+            img(src="images/schools-banner_left.jpg" href="/searchCardholder")
+          li
+            a(href="/searchCardholder") Search
+          li
+            a(href="/courses") Status & Balances
+          li
+            a(href="/activityStatements") Activities & Statements
+          li
+            a(href="/courses") Memos
+          li
+            a(href="/courses") Payments & Payoffs
+          li
+            a(href="/courses") Access Log
+        //.nav.pull-right
+            div(ng-include="'/partials/account/navbar-login'")
+
+  //.col-md-3.div(ng-include="'staticLeftbar'")
+  .col-md-4.div(ng-include="'/partials/main/staticLeftbar'")
+
+  .col-md-8
+    section.content.pad10
+      div(ng-view)
+    //h2=mongoMessage
+        //h1 Standard content in index.jade(html)
+
+  //footer.container.text-center
+      p &copy; 2014 GeneriBooks International
+
+//block main-content2
+//  h1 here you could define another block
+
+
+
+//.navbar.navbar-inverse.navbar-fixed-top
+//  .container
+//    .navbar-header
+//      a.navbar-brand(href="/") GeneriBooks
+//    .navbar-collapse.collapse
+//      ul.nav.navbar-nav
+//        li
+//          a(href="/") Home
+//        li
+//          a(href="/courses") Courses
+//      div(ng-include="'/partials/account/navbar-login'")

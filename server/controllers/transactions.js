@@ -6,26 +6,26 @@ exports.getPendingTransactions = function(req, res){
     //Course.find({}).exec(function(err, collection){
     //    res.send(collection);
     //})
-    var mockTransactionList =
+    var mockPendingTransactionList =
         [
           {
-            date:"12/5/2015", 
-            description:"Leftys Fireworks Stand", 
-            merchantDetails:"Leftys Fireworks, Greenhills, GA", 
+            date:"12/5/2015",
+            description:"Leftys Fireworks Stand",
+            merchantDetails:"Leftys Fireworks, Greenhills, GA",
             amount:"86.15"
           },
           {
-            date:"12/15/2015", 
-            description:"Publix liquors", 
+            date:"12/15/2015",
+            description:"Publix liquors",
             merchantDetails:"Publix St. Petersburg 727-555-1212",
             amount:"26.85"
           }
         ];
 
-    res.send(mockTransactionList);
+    res.send(mockPendingTransactionList);
 };
 
-exports.getPostedTransactions = function(req, res){
+exports.getRecentPostedTransactions = function(req, res){
     //Course.find({}).exec(function(err, collection){
     //    res.send(collection);
     //})

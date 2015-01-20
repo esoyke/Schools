@@ -24,6 +24,14 @@ exports.getInfo = function(req, res) {
                 "mobilePhone": "555-1214",
                 "ssn": "123-45-6789",
                 "dob": "11/5/1955",
+                "programName" : "Visa Bronze",
+                "creditLimit": "6000.00",
+                "availLimit": "4992.40",
+                "minPayAmount": "35.00",
+                "lastPaymentDate": "1/4/2014",
+                "lastPaymentAmount": "43.00",
+                "paymentDue": "35.00",
+                "minPayDate": "1/15/2015",
                 "authUsers": [
                     {
                         "authPIID": "1234-5678-9012-3458",

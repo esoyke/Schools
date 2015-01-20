@@ -5,6 +5,7 @@ var auth = require('./auth'),
     transactions = require('../controllers/transactions'),
     cardholderInfo = require('../controllers/cardholderInfo'),
     searchCardholder = require('../controllers/searchCardholder'),
+    memos = require('../controllers/memos'),
     mongoose = require('mongoose'),
     User = mongoose.model('User');
 
@@ -29,10 +30,11 @@ module.exports = function (app) {
 
     // added for Schools
     app.get('/api/statements', statements.getStatements);
+    app.get('/api/postedTransactions', transactions.getRecentPostedTransactions);
     app.get('/api/pendingTransactions', transactions.getPendingTransactions);
-    app.get('/api/postedTransactions', transactions.getPostedTransactions);
     app.get('/api/searchCardholder', searchCardholder.getSearch);
     app.get('/api/cardholderInfo', cardholderInfo.getInfo);
+    app.get('/api/memos', memos.getMemos);
 
 //temp
     //app.get('/api/transactions', transactions.getPendingTransactions);

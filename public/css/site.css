@@ -28,6 +28,13 @@ temp {
 .fontSoft {
   color: #a9a9a9;
 }
+tr th {
+  background-color: #d1e6f4 !important;
+}
+h1 {
+  color: #d1e6f4;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 body {
   padding-top: 69px;
   padding-bottom: 70px;
@@ -35,14 +42,24 @@ body {
 .majorSection {
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 15px;
+  margin-top: -25px;
 }
 legend {
   margin-bottom: -1px;
+  margin-top: 5px;
   padding: 2px;
+  padding-left: 5px;
   border-radius: 3px;
 }
 pad10 {
   padding: 10px;
+}
+/*padLeft20*/
+/*padding-left 50px*/
+/*margin-left 50px*/
+input {
+  border-radius: 5px;
 }
 .navbar-inverse .navbar-nav li a:focus {
   font-size: 150%;
@@ -51,11 +68,27 @@ pad10 {
   font-size: 120%;
 }
 .navbar {
-  margin-left: -200px;
+  margin-left: -100px;
+}
+.item-fade {
+  vertical-align: top;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+.hover:hover {
+  opacity: 0.2;
 }
 .navbar-header a.navbar-brand {
   margin-top: -10px;
   margin-bottom: -20px;
+}
+.shiftRight50 {
+  margin-left: 50px;
+}
+.shiftDown5 {
+  margin-top: 5px;
 }
 ul.nav.navbar-nav {
   margin-right: -300px;

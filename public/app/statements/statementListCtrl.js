@@ -1,9 +1,9 @@
 /**
  * Created by esoyke on 1/13/15.
  */
-angular.module('app').controller('statementListCtrl', function($scope, cachedStatements, cachedPendingTransactions, cachedPostedTransactions){
+angular.module('app').controller('statementListCtrl', function($scope, cachedStatements, cachedPendingTrans, cachedPostedTransactions){
     $scope.statements = cachedStatements.query();
-    $scope.pendingTransactions = cachedPendingTransactions.query();
+    $scope.pendingTransactions = cachedPendingTrans.query();
     $scope.postedTransactions = cachedPostedTransactions.query();
     //TODO just sort by date
     //$scope.sortOptions = [{value: "title", text: "Sort By Title"},

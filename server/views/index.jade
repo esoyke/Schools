@@ -1,9 +1,9 @@
 extends ../includes/layout
 // must start block on column 0 or node throws error: 'unexpected token 'indent'
 block main-content
-  .navbar.navbar-inverse.navbar-fixed-top
+  .navbar.navbar-inverse.navbar-fixed-top.padLeft20
     .container
-      .navbar-header
+      .navbar-header.padLeft20
         //a.navbar-brand(href="/searchCardholder") Search
       button.navbar-toggle(data-toggle="collapse" data-target=".navbar-collapse")
         span.icon-bar
@@ -16,15 +16,15 @@ block main-content
           li
             a(href="/searchCardholder") Search
           li
-            a(href="/courses") Status & Balances
+            a(href="/underConstruction") Status & Balances
           li
             a(href="/activityStatements") Activities & Statements
           li
-            a(href="/courses") Memos
+            a(href="/memos") Memos
           li
-            a(href="/courses") Payments & Payoffs
+            a(href="/underConstruction") Payments & Payoffs
           li
-            a(href="/courses") Access Log
+            a(href="/underConstruction") Access Log
         //.nav.pull-right
             div(ng-include="'/partials/account/navbar-login'")
 

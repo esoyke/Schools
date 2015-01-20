@@ -37,7 +37,12 @@ angular.module('app').config(function($routeProvider, $locationProvider){
         .when('/searchCardholder', {templateUrl: '/partials/tabs/searchCardholder',
             controller: 'searchCardholderCtrl'
         })
-
+        .when('/memos', {templateUrl: '/partials/tabs/memos',
+            controller: 'memoCtrl'
+        })
+        .when('/underConstruction', {templateUrl: '/partials/tabs/underConstruction',
+            controller: 'memoCtrl'
+        })
         //.when('/staticLeftbar', {templateUrl: '/partials/tabs/staticLeftbar',
         //    controller: 'mvMainCtrl'
         //})

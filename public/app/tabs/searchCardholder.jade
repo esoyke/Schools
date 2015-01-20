@@ -1,40 +1,39 @@
 //
    Created by esoyke on 1/14/15.
 
-br
-br
 h1 Cardholder Search
+
+// TODO- clear other inputs when another gains focus
 
 form.form-horizontal.multiple-form-group(method="post", id="loginForm")
    .fontSoft.h5 (Choose one)
    .form-group.form-group-lg
-      .col-md-2.control-label
-         label Account Number:
+      .col-md-4.control-label
+         h4 Account Number:
       .col-md-3.input-lg
          input(id="username", type="text", name="User", placeholder="Enter cardnumber")
    .form-group.form-group-lg
-      .col-md-2.control-label
-         label SSN:
+      .col-md-4.control-label
+        h4 SSN:
       .col-md-2.input-lg
          input.span3(id="ssn", type="number", name="ssn", placeholder="1234")
       //.col-md-2.label.shiftDown20
          label Last 4 digits only
    .form-group.form-group-lg
-      .col-md-2.control-label
-         label Name & Birthdate:
+      .col-md-4.control-label
+        h4 Name & Birthdate:
       .col-md-2.input-lg
             input.span3(id="cardholderName", type="text", name="cardholderName")
-      .col-md-offset-1.col-md-3
+      .col-md-offset-2.col-md-3.shiftDown5
          .dropdown
             a#dropdown2.dropdown-toggle(role='button', data-toggle='dropdown', data-target='#', href='')
-               .input-group.shiftDown5.shiftRight5
+               .input-group
                   input.form-control(type='text', data-ng-model='data.date')
                   span.input-group-addon
                      i.glyphicon.glyphicon-calendar
             ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
                datetimepicker(data-ng-model='data.date', data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }")
-
-   .col-md-offset-3
+   .col-md-offset-4
       input.btn(type="submit", value="Search")
 
 

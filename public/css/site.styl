@@ -6,7 +6,7 @@
 body
   background-color white
 .majorSection
-  background-color #D1E6F4 //white
+  background-color #D1E6F4
 .navbar
   background-color white //DEEE76 //13987e
 .navbar-inverse .navbar-nav li a
@@ -28,6 +28,17 @@ temp
   margin 20px;
 .fontSoft
   color darkgray
+tr th
+  background-color #D1E6F4 !important
+  //color #D1E6F4
+h1
+  color #D1E6F4
+  text-shadow: // gives a nice outline TODO: only works until focus lost, also need to check in IE
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+
 
 
 ////////////////////////////
@@ -38,13 +49,22 @@ body
 .majorSection
   border-radius 5px
   padding 10px
+  margin-bottom 15px
+  margin-top -25px
 legend
   margin-bottom -1px
+  margin-top 5px
   padding  2px
+  padding-left 5px
   border-radius 3px
 pad10
-  padding 10px;
-
+  padding 10px
+/*padLeft20*/
+  /*padding-left 50px*/
+  /*margin-left 50px*/
+input
+  border-radius 5px
+  //border-top-radius 10px
 
 ////////////////////////////
 // Font
@@ -56,13 +76,30 @@ pad10
 ////////////////////////////
 // Positioning
 .navbar
-  margin-left: -200px
+  margin-left: -100px
+
+////////////////////////////
+// Effects
+.item-fade
+  vertical-align:top;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+.hover:hover
+  opacity:0.2;
+
+
 
 .navbar-header a.navbar-brand
     margin-top -10px //15px
     margin-bottom -20px
 
+.shiftRight50
+  margin-left: 50px;
 
+.shiftDown5
+  margin-top: 5px;
 
 ul.nav.navbar-nav
   //margin-left 150px

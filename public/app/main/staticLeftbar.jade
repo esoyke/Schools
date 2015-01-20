@@ -12,11 +12,32 @@ br
 div(ng-controller="cardholderInfoCtrl").majorSection
 
    //legend.padLeft5 {{cardholderInfo[0].primaryName}}
-   h4.col-md-12.pull-left {{cardholderInfo[0].primaryName}}
+   //h4.col-md-12.pull-left {{cardholderInfo[0].primaryName}}
+
+   //div(id='cardholderPopup')
+      h4
+         a(href="#") {{cardholderInfo[0].primaryName}}
+         span
+            div(ng-include="'/partials/main/cardholderPopup'")
+
+   div(id='cardholderPopup')
+      a(href="#").h4 {{cardholderInfo[0].primaryName}}
+         span
+            div(ng-include="'/partials/main/cardholderPopup'")
+
+
+
    table.table-condensed
       tr.tr
          td
-            span.imgHolder
+           div(id='cardholderPopup')
+             a(href='#')
+                img(src="images/silhouette.png" width=100 height=100)
+                span
+                   div(ng-include="'/partials/main/cardholderPopup'")
+
+
+            //span.imgHolder
                img(src="images/silhouette.png" width=100 height=100).hover.item-fade
          //td.item-fade.hover
             img(src="images/silhouette.png" width=100 height=100).item-fade
@@ -87,28 +108,31 @@ div(ng-controller="cardholderInfoCtrl").majorSection
                      td.col-md-4.h8 {{authUser.authName}}
 
    legend Additional Information
-   table.table-condensed
+   table.table-condensed.table-striped
+      tr.tr
+         td.col-md-3.text-right.h5 Balance :
+         td.col-md-4.h5 $ {{cardholderInfo[0].balance}}
       tr.tr
          td.col-md-3.text-right.h5 Agent Program Name :
          td.col-md-4.h5 {{cardholderInfo[0].programName}}
       tr.tr
          td.col-md-3.text-right.h5 Credit Limit :
-         td.col-md-4.h5 ${{cardholderInfo[0].creditLimit}}
+         td.col-md-4.h5 $ {{cardholderInfo[0].creditLimit}}
       tr.tr
          td.col-md-3.text-right.h5 Available Limit :
-         td.col-md-4.h5 ${{cardholderInfo[0].availLimit}}
+         td.col-md-4.h5 $ {{cardholderInfo[0].availLimit}}
       tr.tr
          td.col-md-3.text-right.h5 Minimum Payment :
-         td.col-md-4.h5 ${{cardholderInfo[0].minPayAmount}}
+         td.col-md-4.h5 $ {{cardholderInfo[0].minPayAmount}}
       tr.tr
          td.col-md-3.text-right.h5 Minimum Due :
-         td.col-md-4.h5 ${{cardholderInfo[0].minPayDate}}
+         td.col-md-4.h5 {{cardholderInfo[0].minPayDate}}
       tr.tr
          td.col-md-3.text-right.h5 Last Payment :
          td.col-md-4.h5 {{cardholderInfo[0].lastPaymentDate}}
       tr.tr
          td.col-md-3.text-right.h5 Last Payment Amount :
-         td.col-md-4.h5 ${{cardholderInfo[0].lastPaymentAmount}}
+         td.col-md-4.h5 $ {{cardholderInfo[0].lastPaymentAmount}}
 
 
        // List of Auth users and PIIDs if CU is CAP

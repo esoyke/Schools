@@ -86,8 +86,49 @@ input
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
-.hover:hover
-  opacity:0.2;
+//.hover:hover
+  //opacity:0.2;
+//#tooltip1 img:hover span
+
+#cardholderPopup
+  position: relative;
+#cardholderPopup a span
+  display: none
+  color: #FFFFFF
+#cardholderPopup a:hover span
+  display: block
+  position: absolute
+  width: 250px
+  //background: url("/images/schools-banner_right.jpg")
+  background-color white
+  height: 150px
+  left: 120px
+  top: -10px
+  color: black
+  padding: 0 5px
+  opacity: 0.93
+  border-radius 6px
+  outline: 1px solid white;
+  outline-offset: 0px
+  //outline-border-radius: 6px
+  -webkit-animation: mymove 1s normal forwards //infinite; /* Chrome, Safari, Opera */
+  animation: mymove 1s normal forwards //infinite;
+  animation-iteration-count: 1
+
+@-webkit-keyframes mymove
+  50% {outline-offset: 50px;}
+
+/* Standard syntax */
+@keyframes mymove
+  1% {outline: 4px solid white;
+    //outline-offset: 3px
+  }
+  50% {outline-offset: 75px;}
+  51% {outline: 0px solid white }
+  100% {outline: 0px solid red }
+
+
+
 
 
 

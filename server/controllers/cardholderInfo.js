@@ -25,6 +25,7 @@ exports.getInfo = function(req, res) {
                 "ssn": "123-45-6789",
                 "dob": "11/5/1955",
                 "programName" : "Visa Bronze",
+                "balance": "1007.60",
                 "creditLimit": "6000.00",
                 "availLimit": "4992.40",
                 "minPayAmount": "35.00",

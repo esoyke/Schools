@@ -1,0 +1,25 @@
+//
+   Created by esoyke on 1/20/15.
+div(ng-controller="cardholderInfoCtrl")
+   table
+      table.table-condensed
+         tr.tr
+            td.col-md-5.text-right.h5 Balance :
+            td.col-md-4.h5 $ {{cardholderInfo[0].balance}}
+         tr.tr
+            td.col-md-5.text-right.h5 Credit Limit :
+            td.col-md-4.h5 $ {{cardholderInfo[0].creditLimit}}
+         tr.tr
+            td.col-md-5.text-right.h5 Minimum Due :
+            td.col-md-4.text-right.h5 $ {{cardholderInfo[0].minPayAmount}}
+         tr.tr
+            td
+            td.col-md-4.h5 {{cardholderInfo[0].minPayDate}}
+         tr.tr
+            td.col-md-5.text-right.h5 Last Payment :
+            td.col-md-4.h5 $ {{cardholderInfo[0].lastPaymentAmount}}
+         tr.tr
+            td
+            td.col-md-4.h5 {{cardholderInfo[0].lastPaymentDate}}
+            //td.col-md-5.text-right.h5 Minimum Due :
+            //td.col-md-4.h5 ${{cardholderInfo[0].minPayDate}}
